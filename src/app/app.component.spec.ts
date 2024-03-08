@@ -20,16 +20,17 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Angular_labConsultec'`, () => {
+  it(`Me devuelve la palabra fizz cuando es multiplo de tres'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Angular_labConsultec');
+    expect(app.fizzBuzz(9)).toEqual('fizz');
   });
 
-  it('should render title', () => {
+  it(`should return buzz'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('Angular_labConsultec app is running!');
+    const app = fixture.componentInstance;
+    expect(app.fizzBuzz(25)).toEqual('buzz');
   });
+
+
 });
