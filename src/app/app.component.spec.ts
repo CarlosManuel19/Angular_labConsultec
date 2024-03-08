@@ -32,5 +32,11 @@ describe('AppComponent', () => {
     expect(app.fizzBuzz(25)).toEqual('buzz');
   });
 
+  it(`should return fizbuzz'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.fizzBuzz(15)).toEqual('fizzbuzz');
+  });
+
 
 });
