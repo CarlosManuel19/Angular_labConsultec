@@ -39,4 +39,26 @@ describe('AppComponent', () => {
   });
 
 
+  it(`should return false si las palabras son exactamente iguales`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.esAnagrama("roma","roma")).toEqual(false);
+  });
+
+  it(`should return false si las palabras tienen diferente longitud`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.esAnagrama("roma","roma")).toEqual(false);
+  });
+
+  it(`verificamos si cada letra está presente en la primera palabra con la misma frecuencia`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.esAnagrama("Nacionalista","ancionalista")).toEqual(true);
+  });
+
+
+  
+
+
 });

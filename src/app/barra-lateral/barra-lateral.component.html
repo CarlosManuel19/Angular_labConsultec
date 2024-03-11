@@ -1,0 +1,23 @@
+<div class="up-container">
+    <div id="box1">
+      <div>
+        <img src="./assets/Logo_Consultec.png" width="140px" height="50px" />
+      </div>
+      <div>
+        <h2 id="aside-text">
+          Te damos la bienvenida al portal Personal Banking
+        </h2>
+      </div>
+      <div>
+ 
+        <p id="aside-text-down" *ngIf="isInLoginComponent">¿Eres nuevo en el banco?</p>
+        <a id="create-key-text" href="#" *ngIf="isInLoginComponent">Crea tu clave</a>
+      </div>
+    </div>
+    <div id="down-container">
+      <div>
+        <p id="aside-text-up-box2">{{asideText}}</p>
+        <a id="register-now" href="#">{{registerText}}</a>
+      </div>
+    </div>
+  </div>
